@@ -1,18 +1,16 @@
-// Mission Lakshya - Khushi AI API
+// Mission Lakshya - Khushi AI
+// Gemini API backend
 // File: api/chat.js
 
 export default async function handler(req, res) {
-  // CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  // Browser preflight
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
 
-  // Only POST allowed
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
@@ -20,24 +18,16 @@ export default async function handler(req, res) {
     });
   }
 
-  // AI API settings
-  const API_KEY = process.env.AI_API_KEY;
-  const API_URL =
-    process.env.AI_API_URL ||
-    "https://api.openai.com/v1/chat/completions";
-  const MODEL =
-    process.env.AI_MODEL || "gpt-4o-mini";
+  const API_KEY = process.env.GEMINI_API_KEY;
 
-  // Check API key
   if (!API_KEY) {
     return res.status(500).json({
       success: false,
-      error: "AI API key is not configured."
+      error: "Gemini API key is not configured."
     });
   }
 
   try {
-    // Read request body
     const body = req.body || {};
 
     const userMessage =
@@ -45,7 +35,6 @@ export default async function handler(req, res) {
         ? body.message.trim()
         : "";
 
-    // Optional conversation history
     const history = Array.isArray(body.history)
       ? body.history
       : [];
@@ -57,7 +46,6 @@ export default async function handler(req, res) {
       });
     }
 
-    // Limit history size
     const safeHistory = history
       .filter(
         (item) =>
@@ -67,105 +55,129 @@ export default async function handler(req, res) {
       )
       .slice(-10)
       .map((item) => ({
-        role:
-          item.role === "assistant"
-            ? "assistant"
-            : "user",
-        content: item.content.slice(0, 6000)
+        role: item.role === "assistant" ? "model" : "user",
+        parts: [
+          {
+            text: item.content.slice(0, 6000)
+          }
+        ]
       }));
 
-    // Khushi AI system instructions
-    const systemMessage = `
-You are Khushi AI, the friendly AI study assistant
+    const systemInstruction = `
+You are Khushi AI, the friendly study assistant
 inside Mission Lakshya – NEET & JEE 2027.
 
-Your job is to help students study Physics, Chemistry,
-Biology and Mathematics.
+Help students with:
+- Physics
+- Chemistry
+- Biology
+- Mathematics
+- NEET preparation
+- JEE preparation
+- Study planning
+- Doubt solving
 
 Rules:
-- Explain concepts clearly and step-by-step.
-- Prefer simple language.
-- You can answer in Hindi, English or Hinglish.
-- For numerical questions, show the calculation steps.
-- For science questions, explain the concept before the final answer.
-- For NEET/JEE preparation, focus on educational explanations.
-- If the student asks for a short answer, keep it short.
-- Never pretend that you can see an image unless image data
-  is actually provided to you.
-- Be encouraging and respectful.
-- Do not claim to be a human teacher.
+- Explain concepts step by step.
+- Use simple Hindi, English or Hinglish.
+- For numerical questions, show the calculation.
+- Give the final answer clearly.
+- For difficult topics, use simple examples.
+- Be friendly, encouraging and respectful.
+- Do not pretend to see an image unless image data
+  has actually been provided.
 `;
 
-    // Build messages
-    const messages = [
+    const contents = [
       {
-        role: "system",
-        content: systemMessage
+        role: "user",
+        parts: [
+          {
+            text: systemInstruction
+          }
+        ]
+      },
+      {
+        role: "model",
+        parts: [
+          {
+            text: "Understood. I am Khushi AI, ready to help with studies."
+          }
+        ]
       },
       ...safeHistory,
       {
         role: "user",
-        content: userMessage
+        parts: [
+          {
+            text: userMessage
+          }
+        ]
       }
     ];
 
-    // Send request to AI provider
-    const response = await fetch(API_URL, {
+    const model =
+      process.env.GEMINI_MODEL || "gemini-3.8-flash";
+
+    const apiUrl =
+      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
+
+    const response = await fetch(apiUrl, {
       method: "POST",
 
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${API_KEY}`
+        "x-goog-api-key": API_KEY
       },
 
       body: JSON.stringify({
-        model: MODEL,
-        messages,
-        temperature: 0.4
+        contents,
+
+        generationConfig: {
+          temperature: 0.4,
+          maxOutputTokens: 2048
+        }
       })
     });
 
-    // Read response
     const data = await response.json();
 
-    // Provider error
     if (!response.ok) {
-      console.error("AI API error:", data);
+      console.error("Gemini API error:", data);
 
       return res.status(response.status).json({
         success: false,
         error:
           data?.error?.message ||
-          "AI request failed.",
-        details: data?.error || null
+          "Gemini API request failed."
       });
     }
 
-    // Extract answer
     const answer =
-      data?.choices?.[0]?.message?.content ||
-      "";
+      data?.candidates?.[0]?.content?.parts
+        ?.map((part) => part.text || "")
+        .join("")
+        .trim() || "";
 
     if (!answer) {
       return res.status(502).json({
         success: false,
-        error: "AI returned an empty response."
+        error: "Gemini returned an empty response."
       });
     }
 
-    // Send answer to frontend
     return res.status(200).json({
       success: true,
-      answer: answer.trim(),
-      model: MODEL
+      answer,
+      model
     });
 
   } catch (error) {
-    console.error("Khushi AI server error:", error);
+    console.error("Khushi AI error:", error);
 
     return res.status(500).json({
       success: false,
-      error: "Unable to connect to Khushi AI.",
+      error: "Unable to connect to Gemini.",
       message: error?.message || "Unknown error"
     });
   }
