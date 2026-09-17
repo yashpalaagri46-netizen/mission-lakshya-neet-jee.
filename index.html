@@ -1,1 +1,1177 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12082f">
+  <meta name="description" content="Mission Lakshya – NEET & JEE 2027">
+  <title>Mission Lakshya – NEET & JEE 2027</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+      <div class="brand-logo">ML</div>
+      <div>
+        <div class="brand-title">MISSION</div>
+        <div class="brand-title">LAKSHYA</div>
+        <div class="brand-sub">NEET & JEE 2027</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+
+      <button class="nav-item active" data-section="home">
+        <span>🏠</span><span>Home</span>
+      </button>
+
+      <button class="nav-item" data-section="library">
+        <span>📚</span><span>Library</span>
+      </button>
+
+      <button class="nav-item" data-section="books">
+        <span>📖</span><span>Books & NCERT</span>
+      </button>
+
+      <button class="nav-item" data-section="videos">
+        <span>🎥</span><span>Video Lectures</span>
+      </button>
+
+      <button class="nav-item" data-section="questions">
+        <span>📝</span><span>Question Bank</span>
+      </button>
+
+      <button class="nav-item" data-section="dpp">
+        <span>📄</span><span>DPP</span>
+      </button>
+
+      <button class="nav-item" data-section="quiz">
+        <span>🧠</span><span>Quiz</span>
+      </button>
+
+      <button class="nav-item" data-section="mock">
+        <span>🏆</span><span>Mock Test</span>
+      </button>
+
+      <button class="nav-item" data-section="pyq">
+        <span>📋</span><span>PYQ</span>
+      </button>
+
+      <button class="nav-item" data-section="khushi">
+        <span>🤖</span><span>Khushi AI</span>
+      </button>
+
+      <button class="nav-item" data-section="planner">
+        <span>📅</span><span>Study Planner</span>
+      </button>
+
+      <button class="nav-item" data-section="analytics">
+        <span>📊</span><span>Analytics</span>
+      </button>
+
+      <button class="nav-item" data-section="bookmarks">
+        <span>🔖</span><span>Bookmarks</span>
+      </button>
+
+      <button class="nav-item" data-section="lab">
+        <span>🧬</span><span>3D Learning Lab</span>
+        <b class="new-badge">NEW</b>
+      </button>
+
+      <button class="nav-item" data-section="tools">
+        <span>🧮</span><span>PCMB Tools</span>
+      </button>
+
+      <button class="nav-item" data-section="youtube">
+        <span>🔴</span><span>YouTube LIVE</span>
+      </button>
+
+      <button class="nav-item" data-section="websites">
+        <span>🌐</span><span>Study Websites</span>
+      </button>
+
+      <button class="nav-item" data-section="themes">
+        <span>🎨</span><span>Themes</span>
+      </button>
+
+      <button class="nav-item" data-section="settings">
+        <span>⚙️</span><span>Settings</span>
+      </button>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+      <div class="student-card">
+        <div class="avatar">YA</div>
+        <div>
+          <strong>Yashpal Aagri</strong>
+          <small>Student</small>
+        </div>
+      </div>
+
+      <div class="streak-mini">
+        🔥 <strong>6 Days</strong>
+        <span>Study Streak</span>
+      </div>
+
+      <div class="created">
+        Created by Yashpal Aagri
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+      <button class="mobile-menu" id="mobileMenu">☰</button>
+
+      <div class="search-box">
+        <span>🔍</span>
+        <input
+          id="globalSearch"
+          type="search"
+          placeholder="Search anything..."
+        >
+        <kbd>⌘ K</kbd>
+      </div>
+
+      <div class="top-actions">
+
+        <button class="top-btn" id="languageBtn">
+          HI <span>EN</span>
+        </button>
+
+        <button class="top-btn" id="themeQuickBtn">
+          🌙
+        </button>
+
+        <button class="top-btn notification-btn">
+          🔔
+          <i></i>
+        </button>
+
+        <button class="profile-btn">
+          <span class="avatar small">YA</span>
+          <span class="profile-name">Yashpal</span>
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- HOME -->
+      <section class="section active" id="home">
+
+        <div class="hero">
+
+          <div class="hero-content">
+
+            <span class="hero-label">YOUR SUCCESS, OUR MISSION</span>
+
+            <h1>
+              MISSION<br>
+              <strong>LAKSHYA</strong>
+            </h1>
+
+            <div class="hero-exam">NEET & JEE 2027</div>
+
+            <p class="hero-hindi">
+              सपने नहीं, अब लक्ष्य है।<br>
+              पढ़ाई आज से, सफलता कल से।
+            </p>
+
+            <div class="hero-buttons">
+              <button class="primary-btn" data-go="library">
+                🚀 Start Learning
+              </button>
+
+              <button class="secondary-btn" data-go="khushi">
+                🤖 Ask Khushi AI
+              </button>
+            </div>
+
+          </div>
+
+          <div class="hero-orb">
+
+            <div class="orb-ring ring1"></div>
+            <div class="orb-ring ring2"></div>
+            <div class="orb-ring ring3"></div>
+
+            <div class="orb-core">
+              <span>ML</span>
+              <small>2027</small>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- STATS -->
+        <div class="stats-grid">
+
+          <div class="stat-card">
+            <div class="stat-icon">📈</div>
+            <span>Today's Progress</span>
+            <strong>42%</strong>
+            <div class="progress">
+              <i style="width:42%"></i>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🔥</div>
+            <span>Study Streak</span>
+            <strong>6 Days</strong>
+            <small>Personal best: 12 days</small>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">⏱️</div>
+            <span>Total Study Hours</span>
+            <strong>123h</strong>
+            <small>+8h this week</small>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <span>Completed Chapters</span>
+            <strong>18/37</strong>
+            <small>49% completed</small>
+          </div>
+
+        </div>
+
+
+        <!-- QUICK ACCESS -->
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">QUICK ACCESS</span>
+            <h2>Start Learning</h2>
+          </div>
+        </div>
+
+        <div class="subject-grid">
+
+          <button class="subject-card physics" data-go="videos">
+            <span class="subject-3d">⚛️</span>
+            <div>
+              <small>NEET + JEE</small>
+              <h3>Physics</h3>
+            </div>
+            <b>→</b>
+          </button>
+
+          <button class="subject-card chemistry" data-go="videos">
+            <span class="subject-3d">🧪</span>
+            <div>
+              <small>NEET + JEE</small>
+              <h3>Chemistry</h3>
+            </div>
+            <b>→</b>
+          </button>
+
+          <button class="subject-card biology" data-go="videos">
+            <span class="subject-3d">🧬</span>
+            <div>
+              <small>NEET</small>
+              <h3>Biology</h3>
+            </div>
+            <b>→</b>
+          </button>
+
+          <button class="subject-card maths" data-go="videos">
+            <span class="subject-3d">∑</span>
+            <div>
+              <small>JEE</small>
+              <h3>Mathematics</h3>
+            </div>
+            <b>→</b>
+          </button>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <button class="feature-card" data-go="dpp">
+            <span>📄</span>
+            <div>
+              <small>TODAY'S DPP</small>
+              <strong>90 Questions</strong>
+            </div>
+          </button>
+
+          <button class="feature-card" data-go="quiz">
+            <span>🧠</span>
+            <div>
+              <small>DAILY QUIZ</small>
+              <strong>Test Yourself</strong>
+            </div>
+          </button>
+
+          <button class="feature-card" data-go="lab">
+            <span>🔬</span>
+            <div>
+              <small>3D LAB</small>
+              <strong>Explore PCMB</strong>
+            </div>
+          </button>
+
+          <button class="feature-card" data-go="khushi">
+            <span>🤖</span>
+            <div>
+              <small>AI DOUBT SOLVER</small>
+              <strong>Ask Khushi</strong>
+            </div>
+          </button>
+
+        </div>
+
+
+        <!-- CONTINUE -->
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">CONTINUE LEARNING</span>
+            <h2>Pick up where you left off</h2>
+          </div>
+        </div>
+
+        <div class="continue-grid">
+
+          <div class="continue-card">
+            <div class="course-icon">⚡</div>
+            <div class="course-info">
+              <span>Physics • Class 12</span>
+              <h3>Current Electricity</h3>
+              <div class="progress">
+                <i style="width:60%"></i>
+              </div>
+              <small>60% complete</small>
+            </div>
+            <button data-go="videos">Continue</button>
+          </div>
+
+          <div class="continue-card">
+            <div class="course-icon">🧪</div>
+            <div class="course-info">
+              <span>Chemistry • Class 11</span>
+              <h3>Some Basic Concepts</h3>
+              <div class="progress">
+                <i style="width:35%"></i>
+              </div>
+              <small>35% complete</small>
+            </div>
+            <button data-go="videos">Continue</button>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- LIBRARY -->
+      <section class="section" id="library">
+        <div class="page-head">
+          <span class="eyebrow">LEARNING HUB</span>
+          <h1>📚 Library</h1>
+          <p>सभी study material एक ही जगह।</p>
+        </div>
+
+        <div class="library-grid">
+          <div class="big-card">
+            <span class="big-icon">📖</span>
+            <h2>Study Material</h2>
+            <p>Notes, modules और chapter resources.</p>
+            <button data-go="books">Open Books</button>
+          </div>
+
+          <div class="big-card">
+            <span class="big-icon">🎥</span>
+            <h2>Video Lectures</h2>
+            <p>NEET और JEE के lectures.</p>
+            <button data-go="videos">Watch Videos</button>
+          </div>
+
+          <div class="big-card">
+            <span class="big-icon">📝</span>
+            <h2>Practice</h2>
+            <p>Questions, DPP और quizzes.</p>
+            <button data-go="questions">Practice Now</button>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- BOOKS -->
+      <section class="section" id="books">
+        <div class="page-head">
+          <span class="eyebrow">BOOKS & NCERT</span>
+          <h1>📖 Books</h1>
+          <p>NCERT और study books.</p>
+        </div>
+
+        <div class="filter-row">
+          <button class="filter active">All</button>
+          <button class="filter">Physics</button>
+          <button class="filter">Chemistry</button>
+          <button class="filter">Biology</button>
+          <button class="filter">Mathematics</button>
+        </div>
+
+        <div class="resource-grid">
+
+          <div class="resource-card">
+            <span>📘</span>
+            <h3>NCERT Biology</h3>
+            <p>Class 11 & 12</p>
+            <button>Open PDF</button>
+          </div>
+
+          <div class="resource-card">
+            <span>📕</span>
+            <h3>Physics Books</h3>
+            <p>NEET + JEE</p>
+            <button>Open</button>
+          </div>
+
+          <div class="resource-card">
+            <span>📗</span>
+            <h3>Chemistry Books</h3>
+            <p>NEET + JEE</p>
+            <button>Open</button>
+          </div>
+
+          <div class="resource-card">
+            <span>📙</span>
+            <h3>Mathematics Books</h3>
+            <p>JEE</p>
+            <button>Open</button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- VIDEOS -->
+      <section class="section" id="videos">
+        <div class="page-head">
+          <span class="eyebrow">VIDEO LECTURES</span>
+          <h1>🎥 Video Lectures</h1>
+          <p>Chapter और subject के हिसाब से lectures खोजें।</p>
+        </div>
+
+        <div class="filter-row">
+          <button class="filter active">All</button>
+          <button class="filter">Physics</button>
+          <button class="filter">Chemistry</button>
+          <button class="filter">Biology</button>
+          <button class="filter">Maths</button>
+        </div>
+
+        <div class="video-grid">
+
+          <div class="video-card">
+            <div class="video-thumb">▶</div>
+            <div>
+              <small>PHYSICS • CLASS 12</small>
+              <h3>Current Electricity</h3>
+              <p>Concept Lecture</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">▶</div>
+            <div>
+              <small>CHEMISTRY • CLASS 11</small>
+              <h3>Basic Concepts</h3>
+              <p>Complete Chapter</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb">▶</div>
+            <div>
+              <small>BIOLOGY • CLASS 11</small>
+              <h3>Cell Biology</h3>
+              <p>NEET Preparation</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- QUESTIONS -->
+      <section class="section" id="questions">
+        <div class="page-head">
+          <span class="eyebrow">PRACTICE</span>
+          <h1>📝 Question Bank</h1>
+          <p>NEET + JEE chapter-wise questions.</p>
+        </div>
+
+        <div class="practice-panel">
+          <div>
+            <span>QUESTION BANK</span>
+            <h2>Practice smarter</h2>
+            <p>Subject, chapter और difficulty के अनुसार questions चुनें।</p>
+          </div>
+
+          <div class="select-grid">
+            <select>
+              <option>Exam — NEET</option>
+              <option>Exam — JEE</option>
+            </select>
+
+            <select>
+              <option>Subject — Physics</option>
+              <option>Subject — Chemistry</option>
+              <option>Subject — Biology</option>
+              <option>Subject — Mathematics</option>
+            </select>
+
+            <select>
+              <option>Difficulty — All</option>
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+            </select>
+          </div>
+
+          <button class="primary-btn">Start Practice</button>
+        </div>
+      </section>
+
+
+      <!-- DPP -->
+      <section class="section" id="dpp">
+        <div class="page-head">
+          <span class="eyebrow">DAILY PRACTICE</span>
+          <h1>📄 DPP</h1>
+          <p>Daily Practice Problems.</p>
+        </div>
+
+        <div class="dpp-hero">
+          <div>
+            <span>TODAY'S TARGET</span>
+            <h2>90 Questions</h2>
+            <p>Physics 30 • Chemistry 30 • Biology 30</p>
+          </div>
+
+          <button class="primary-btn">Start DPP</button>
+        </div>
+
+        <div class="stats-grid mini">
+          <div class="stat-card">
+            <span>Completed</span>
+            <strong>0/90</strong>
+          </div>
+          <div class="stat-card">
+            <span>Accuracy</span>
+            <strong>—</strong>
+          </div>
+          <div class="stat-card">
+            <span>Streak</span>
+            <strong>6 days</strong>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- QUIZ -->
+      <section class="section" id="quiz">
+        <div class="page-head">
+          <span class="eyebrow">TEST YOURSELF</span>
+          <h1>🧠 Quiz</h1>
+          <p>Quick chapter quizzes.</p>
+        </div>
+
+        <div class="quiz-card">
+          <div class="quiz-icon">🧠</div>
+          <h2>Daily Science Quiz</h2>
+          <p>20 Questions • Timed</p>
+          <button class="primary-btn">Start Quiz</button>
+        </div>
+      </section>
+
+
+      <!-- MOCK -->
+      <section class="section" id="mock">
+        <div class="page-head">
+          <span class="eyebrow">FULL TEST</span>
+          <h1>🏆 Mock Test</h1>
+          <p>NEET और JEE test practice.</p>
+        </div>
+
+        <div class="test-grid">
+
+          <div class="test-card">
+            <span>🩺</span>
+            <h2>NEET Mock Test</h2>
+            <p>180 Questions • Full Syllabus</p>
+            <button>Start Test</button>
+          </div>
+
+          <div class="test-card">
+            <span>⚡</span>
+            <h2>JEE Mock Test</h2>
+            <p>Physics • Chemistry • Mathematics</p>
+            <button>Start Test</button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- PYQ -->
+      <section class="section" id="pyq">
+        <div class="page-head">
+          <span class="eyebrow">PREVIOUS YEARS</span>
+          <h1>📋 PYQ</h1>
+          <p>NEET और JEE Previous Year Questions.</p>
+        </div>
+
+        <div class="year-grid">
+          <button>NEET 2026</button>
+          <button>NEET 2025</button>
+          <button>NEET 2024</button>
+          <button>JEE 2026</button>
+          <button>JEE 2025</button>
+          <button>JEE 2024</button>
+        </div>
+      </section>
+
+
+      <!-- KHUSHI AI -->
+      <section class="section" id="khushi">
+
+        <div class="page-head">
+          <span class="eyebrow">AI STUDY ASSISTANT</span>
+          <h1>🤖 Khushi AI</h1>
+          <p>अपना study doubt पूछें।</p>
+        </div>
+
+        <div class="ai-layout">
+
+          <div class="ai-profile">
+
+            <div class="ai-avatar">
+              <span>AI</span>
+            </div>
+
+            <h2>Khushi AI</h2>
+            <p>Your AI Study Partner</p>
+
+            <div class="ai-features">
+              <span>🧠 Doubt Solving</span>
+              <span>📷 Photo Solution</span>
+              <span>🌐 Hindi + English</span>
+            </div>
+
+          </div>
+
+          <div class="chat-box">
+
+            <div class="chat-messages" id="chatMessages">
+
+              <div class="message ai">
+                <b>Khushi AI</b>
+                <p>नमस्ते! 👋 अपना question पूछो।</p>
+              </div>
+
+            </div>
+
+            <form class="chat-input" id="chatForm">
+              <input
+                id="chatInput"
+                type="text"
+                placeholder="अपना doubt लिखें..."
+                autocomplete="off"
+              >
+              <button type="submit">➤</button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- PLANNER -->
+      <section class="section" id="planner">
+        <div class="page-head">
+          <span class="eyebrow">PLAN YOUR DAY</span>
+          <h1>📅 Study Planner</h1>
+          <p>आज का study plan बनाएं।</p>
+        </div>
+
+        <div class="planner">
+
+          <form id="plannerForm">
+            <input id="taskInput" type="text" placeholder="आज क्या पढ़ना है?">
+            <select id="taskSubject">
+              <option>Physics</option>
+              <option>Chemistry</option>
+              <option>Biology</option>
+              <option>Mathematics</option>
+            </select>
+            <button class="primary-btn" type="submit">+ Add Task</button>
+          </form>
+
+          <div id="taskList" class="task-list"></div>
+
+        </div>
+      </section>
+
+
+      <!-- ANALYTICS -->
+      <section class="section" id="analytics">
+        <div class="page-head">
+          <span class="eyebrow">YOUR PERFORMANCE</span>
+          <h1>📊 Analytics</h1>
+          <p>अपनी study progress देखें।</p>
+        </div>
+
+        <div class="analytics-grid">
+
+          <div class="analytics-card">
+            <span>Study Hours</span>
+            <strong>123h</strong>
+            <div class="chart-bars">
+              <i style="height:35%"></i>
+              <i style="height:55%"></i>
+              <i style="height:45%"></i>
+              <i style="height:70%"></i>
+              <i style="height:60%"></i>
+              <i style="height:85%"></i>
+              <i style="height:65%"></i>
+            </div>
+          </div>
+
+          <div class="analytics-card">
+            <span>Chapter Progress</span>
+            <strong>49%</strong>
+            <div class="circle-progress">49%</div>
+          </div>
+
+          <div class="analytics-card">
+            <span>Test Performance</span>
+            <strong>—</strong>
+            <p>Tests complete करने के बाद data दिखाई देगा।</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- BOOKMARKS -->
+      <section class="section" id="bookmarks">
+        <div class="page-head">
+          <span class="eyebrow">SAVED ITEMS</span>
+          <h1>🔖 Bookmarks</h1>
+          <p>आपके saved resources.</p>
+        </div>
+
+        <div class="empty-state">
+          <span>🔖</span>
+          <h2>No bookmarks yet</h2>
+          <p>Books, videos और questions save करने पर यहाँ दिखाई देंगे।</p>
+        </div>
+      </section>
+
+
+      <!-- 3D LAB -->
+      <section class="section" id="lab">
+
+        <div class="page-head">
+          <span class="eyebrow">INTERACTIVE SCIENCE</span>
+          <h1>🧬 PCMB 3D Learning Lab</h1>
+          <p>Physics, Chemistry, Biology और Mathematics को interactive तरीके से explore करें।</p>
+        </div>
+
+        <div class="lab-hero">
+
+          <div class="lab-orbit">
+            <div class="planet p1">⚛️</div>
+            <div class="planet p2">🧬</div>
+            <div class="planet p3">🧪</div>
+            <div class="planet p4">∑</div>
+
+            <div class="lab-core">
+              <span>PCMB</span>
+              <small>3D LAB</small>
+            </div>
+          </div>
+
+          <div>
+            <span class="eyebrow">EXPLORE</span>
+            <h2>Learn Science in 3D</h2>
+            <p>Models, simulations और interactive resources एक ही जगह।</p>
+          </div>
+
+        </div>
+
+        <div class="lab-grid">
+
+          <div class="lab-card">
+            <div class="lab-object">⚛️</div>
+            <h2>Physics 3D</h2>
+            <p>Mechanics, electricity और waves.</p>
+            <button>Explore</button>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-object">🧪</div>
+            <h2>Chemistry 3D</h2>
+            <p>Molecules और atomic structures.</p>
+            <button>Explore</button>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-object">🧬</div>
+            <h2>Biology 3D</h2>
+            <p>Cells, organs और biological models.</p>
+            <button>Explore</button>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-object">∑</div>
+            <h2>Mathematics 3D</h2>
+            <p>Geometry और mathematical visualization.</p>
+            <button>Explore</button>
+          </div>
+
+        </div>
+
+
+        <div class="external-lab-grid">
+
+          <div class="external-card sketchfab">
+            <span class="external-icon">🔬</span>
+            <div>
+              <small>3D MODEL LIBRARY</small>
+              <h2>Sketchfab</h2>
+              <p>Science & Technology के 3D models explore करें।</p>
+            </div>
+            <a
+              href="https://sketchfab.com/3d-models/categories/science-technology?cursor=bz0yNA%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open 3D Library ↗
+            </a>
+          </div>
+
+          <div class="external-card phet">
+            <span class="external-icon">🧪</span>
+            <div>
+              <small>INTERACTIVE SIMULATIONS</small>
+              <h2>PhET</h2>
+              <p>Physics, Chemistry, Biology और Maths simulations.</p>
+            </div>
+            <a
+              href="https://phet.colorado.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open PhET ↗
+            </a>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- TOOLS -->
+      <section class="section" id="tools">
+
+        <div class="page-head">
+          <span class="eyebrow">CALCULATORS</span>
+          <h1>🧮 PCMB Tools</h1>
+          <p>Physics, Chemistry, Biology और Mathematics tools.</p>
+        </div>
+
+        <div class="tools-grid">
+
+          <div class="tool-card">
+            <span>⚛️</span>
+            <h3>Physics</h3>
+            <p>Formula & calculation tools</p>
+            <button data-tool="physics">Open</button>
+          </div>
+
+          <div class="tool-card">
+            <span>🧪</span>
+            <h3>Chemistry</h3>
+            <p>Molarity & concentration</p>
+            <button data-tool="chemistry">Open</button>
+          </div>
+
+          <div class="tool-card">
+            <span>🧬</span>
+            <h3>Biology</h3>
+            <p>Reference tools</p>
+            <button data-tool="biology">Open</button>
+          </div>
+
+          <div class="tool-card">
+            <span>∑</span>
+            <h3>Mathematics</h3>
+            <p>Calculator & formulas</p>
+            <button data-tool="math">Open</button>
+          </div>
+
+        </div>
+
+        <div class="calculator">
+
+          <input id="calcDisplay" readonly value="0">
+
+          <div class="calc-buttons">
+            <button data-calc="C">C</button>
+            <button data-calc="(">(</button>
+            <button data-calc=")">)</button>
+            <button data-calc="/">÷</button>
+
+            <button data-calc="7">7</button>
+            <button data-calc="8">8</button>
+            <button data-calc="9">9</button>
+            <button data-calc="*">×</button>
+
+            <button data-calc="4">4</button>
+            <button data-calc="5">5</button>
+            <button data-calc="6">6</button>
+            <button data-calc="-">−</button>
+
+            <button data-calc="1">1</button>
+            <button data-calc="2">2</button>
+            <button data-calc="3">3</button>
+            <button data-calc="+">+</button>
+
+            <button data-calc="0">0</button>
+            <button data-calc=".">.</button>
+            <button class="equals" data-calc="=">=</button>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- YOUTUBE -->
+      <section class="section" id="youtube">
+
+        <div class="page-head">
+          <span class="eyebrow">LIVE CLASSES</span>
+          <h1>🔴 YouTube LIVE</h1>
+          <p>Live classes और educational streams.</p>
+        </div>
+
+        <div class="youtube-panel">
+
+          <div class="live-screen">
+            <div>
+              <span class="live-dot">● LIVE</span>
+              <h2>YouTube Live Classes</h2>
+              <p>API connect होने पर live streams यहाँ दिखाई देंगी।</p>
+            </div>
+          </div>
+
+          <div class="channel-grid">
+
+            <button>Physics Wallah</button>
+            <button>PW Hindi</button>
+            <button>PW JEE</button>
+            <button>PW NEET</button>
+            <button>Unacademy</button>
+            <button>Vijay Education</button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- WEBSITES -->
+      <section class="section" id="websites">
+
+        <div class="page-head">
+          <span class="eyebrow">STUDY RESOURCES</span>
+          <h1>🌐 Study Websites</h1>
+          <p>Important study resources एक ही जगह।</p>
+        </div>
+
+        <div class="website-grid">
+
+          <a href="https://www.ncert.nic.in/" target="_blank" rel="noopener noreferrer">
+            📘 <strong>NCERT</strong>
+            <small>Official NCERT resources</small>
+          </a>
+
+          <a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer">
+            🏛️ <strong>NTA</strong>
+            <small>National Testing Agency</small>
+          </a>
+
+          <a href="https://sketchfab.com/" target="_blank" rel="noopener noreferrer">
+            🔬 <strong>Sketchfab</strong>
+            <small>3D Models</small>
+          </a>
+
+          <a href="https://phet.colorado.edu/" target="_blank" rel="noopener noreferrer">
+            🧪 <strong>PhET</strong>
+            <small>Interactive simulations</small>
+          </a>
+
+          <div class="website-note">
+            बाकी तुम्हारे दिए हुए study websites भी इसी section में add किए जा सकते हैं।
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- THEMES -->
+      <section class="section" id="themes">
+
+        <div class="page-head">
+          <span class="eyebrow">PERSONALIZE</span>
+          <h1>🎨 Themes</h1>
+          <p>पूरे website का theme बदलें।</p>
+        </div>
+
+        <div class="theme-grid">
+
+          <button class="theme-card" data-theme="midnight">
+            <i></i>
+            <strong>Midnight Purple</strong>
+          </button>
+
+          <button class="theme-card" data-theme="ocean">
+            <i></i>
+            <strong>Ocean Blue</strong>
+          </button>
+
+          <button class="theme-card" data-theme="emerald">
+            <i></i>
+            <strong>Emerald</strong>
+          </button>
+
+          <button class="theme-card" data-theme="rose">
+            <i></i>
+            <strong>Rose</strong>
+          </button>
+
+          <button class="theme-card" data-theme="sunset">
+            <i></i>
+            <strong>Sunset</strong>
+          </button>
+
+          <button class="theme-card" data-theme="gold">
+            <i></i>
+            <strong>Golden</strong>
+          </button>
+
+          <button class="theme-card" data-theme="cyber">
+            <i></i>
+            <strong>Cyber</strong>
+          </button>
+
+          <button class="theme-card" data-theme="light">
+            <i></i>
+            <strong>Light</strong>
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- SETTINGS -->
+      <section class="section" id="settings">
+
+        <div class="page-head">
+          <span class="eyebrow">CONTROL CENTER</span>
+          <h1>⚙️ Settings</h1>
+          <p>Mission Lakshya settings.</p>
+        </div>
+
+        <div class="settings-list">
+
+          <div class="setting-row">
+            <div>
+              <strong>Language</strong>
+              <small>Hindi / English</small>
+            </div>
+            <button id="settingsLanguage">Hindi</button>
+          </div>
+
+          <div class="setting-row">
+            <div>
+              <strong>Dark Mode</strong>
+              <small>Premium dark interface</small>
+            </div>
+            <button id="settingsTheme">Themes</button>
+          </div>
+
+          <div class="setting-row">
+            <div>
+              <strong>Study Target</strong>
+              <small>NEET + JEE 2027</small>
+            </div>
+            <span class="setting-value">2027</span>
+          </div>
+
+          <div class="setting-row">
+            <div>
+              <strong>Profile</strong>
+              <small>Yashpal Aagri</small>
+            </div>
+            <span class="setting-value">Student</span>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+        </html>
